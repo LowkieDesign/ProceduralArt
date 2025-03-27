@@ -233,7 +233,7 @@ MonoBehaviour:
   computeShader: {fileID: 7200000, guid: 38c9724cf0ec94df397375dbb5e58c2e, type: 3}
   width: 1024
   height: 1024
-  numOfAgents: 40352
+  numOfAgents: 40320
   distFromMapEdge: 10
   speed: 64
   diffuseRate: 0.36843538

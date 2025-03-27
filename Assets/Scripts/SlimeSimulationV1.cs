@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public struct AgentV1
@@ -28,7 +26,7 @@ public class SlimeSimulationV1 : MonoBehaviour
     public int height;
 
     [Header("General")]
-    [RangeWithStep(32, 1048576, 32f)]
+    [RangeWithStep(32, 40352, 32f)]
     public float numOfAgents;
 
     [RangeWithStep(0, 250, 10f)]
@@ -112,6 +110,17 @@ public class SlimeSimulationV1 : MonoBehaviour
 
         ResetAgents();
         ResetGradientTexture();
+        Debug.LogError(width);
+        Debug.LogError(height);
+        Debug.LogError(numOfAgents);
+        Debug.LogError(distFromMapEdge);
+        Debug.LogError(speed);
+        Debug.LogError(diffuseRate);
+        Debug.LogError(trailDecayRate);
+        Debug.LogError(diffuseDecayRate);
+        Debug.LogError(sensorOffset);
+        Debug.LogError(sensorAngle);
+        Debug.LogError(rotationAngle);
     }
 
     public void RandomizeAgentSettings()
@@ -274,6 +283,7 @@ public class SlimeSimulationV1 : MonoBehaviour
 
     void Update()
     {
+        Debug.LogError(agents.Length);
         if (agents == null)
         {
             return;

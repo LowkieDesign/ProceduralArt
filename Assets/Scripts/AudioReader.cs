@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,7 +43,7 @@ public class AudioReader : MonoBehaviour
             slimeMoldShader.SetFloat("frequencyFactor", frequency / 2000f);  // Verhouding van de frequentie
 
             // Gebruik de frequentie om de helderheid te berekenen (meer helderheid bij hogere frequenties)
-            float brightness = Mathf.Lerp(1.5f, 2.0f, frequency / 2000f);
+            float brightness = Mathf.Lerp(1.25f, 2.0f, frequency / 2000f);
             slimeMoldShader.SetFloat("brightness", brightness);
 
             // **BELANGRIJK**: Dispatch de Compute Shader

@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+using UnityEngine;
 
 // code by chatGPT
 [CustomPropertyDrawer(typeof(RangeWithStepAttribute))]
@@ -40,3 +39,4 @@ public class RangeWithStepDrawer : PropertyDrawer
         }
     }
 }
+#endif
